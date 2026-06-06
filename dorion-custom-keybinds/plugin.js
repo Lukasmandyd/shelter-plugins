@@ -154,14 +154,14 @@ function t(key, replace) {
 //#endregion
 //#region plugins/dorion-custom-keybinds/components/Keybinds.tsx.scss
 const classes$3 = {
-	"keybindsSwitch": "Zz-Z3G_keybindsSwitch",
 	"keybindsBanner": "Zz-Z3G_keybindsBanner",
-	"keybindRestartButton": "Zz-Z3G_keybindRestartButton",
 	"header": "Zz-Z3G_header",
+	"keybindsSwitch": "Zz-Z3G_keybindsSwitch",
 	"keybindSection": "Zz-Z3G_keybindSection",
-	"keybindsButton": "Zz-Z3G_keybindsButton",
 	"keybindRestartCard": "Zz-Z3G_keybindRestartCard",
-	"keybindsHeader": "Zz-Z3G_keybindsHeader"
+	"keybindRestartButton": "Zz-Z3G_keybindRestartButton",
+	"keybindsHeader": "Zz-Z3G_keybindsHeader",
+	"keybindsButton": "Zz-Z3G_keybindsButton"
 };
 const css$3 = `.Zz-Z3G_keybindSection {
   flex-direction: column;
@@ -230,12 +230,12 @@ const css$3 = `.Zz-Z3G_keybindSection {
 //#endregion
 //#region plugins/dorion-custom-keybinds/components/KeybindSection.tsx.scss
 const classes$2 = {
-	"actionSection": "QTLdLq_actionSection",
-	"note": "QTLdLq_note",
-	"removeButton": "QTLdLq_removeButton",
 	"keybindRoot": "QTLdLq_keybindRoot",
+	"actionSection": "QTLdLq_actionSection",
+	"removeButton": "QTLdLq_removeButton",
 	"keybindSection": "QTLdLq_keybindSection",
-	"keybindArea": "QTLdLq_keybindArea"
+	"keybindArea": "QTLdLq_keybindArea",
+	"note": "QTLdLq_note"
 };
 const css$2 = `.QTLdLq_keybindRoot {
   flex-direction: column;
@@ -292,8 +292,8 @@ const css$2 = `.QTLdLq_keybindRoot {
 //#endregion
 //#region components/Dropdown.tsx.scss
 const classes$1 = {
-	"ddown": "sqVpyW_ddown",
 	"dcontainer": "sqVpyW_dcontainer",
+	"ddown": "sqVpyW_ddown",
 	"dsarrow": "sqVpyW_dsarrow",
 	"ddownplaceholder": "sqVpyW_ddownplaceholder"
 };
@@ -434,12 +434,12 @@ const Dropdown = (props) => {
 //#endregion
 //#region components/KeybindInput.tsx.scss
 const classes = {
-	"keybindContainer": "N-HDcq_keybindContainer",
-	"keybindPlaceholder": "N-HDcq_keybindPlaceholder",
 	"recording": "N-HDcq_recording",
-	"keybindInput": "N-HDcq_keybindInput",
 	"pulse": "N-HDcq_pulse",
-	"keybindButton": "N-HDcq_keybindButton"
+	"keybindButton": "N-HDcq_keybindButton",
+	"keybindPlaceholder": "N-HDcq_keybindPlaceholder",
+	"keybindContainer": "N-HDcq_keybindContainer",
+	"keybindInput": "N-HDcq_keybindInput"
 };
 const css = `.N-HDcq_keybindContainer {
   background: var(--background-base-lowest);
@@ -1165,6 +1165,9 @@ const trackSettingsViewedCallback = (payload) => {
 };
 const subscriptions = [FluxDispatcher.subscribe("TRACK", trackSettingsViewedCallback)];
 register();
+setTimeout(() => {
+	viewedKeybindsCallback({ section: "Keybinds" });
+}, 500);
 const onUnload = () => {
 	for (const unsub of subscriptions) unsub();
 	unregister();

@@ -671,9 +671,9 @@ else {
 //#region plugins/plugin-browser/components/Plugins.scss
 const classes$1 = {
 	"loading": "L-W60G_loading",
-	"split": "L-W60G_split",
-	"pluginList": "L-W60G_pluginList",
 	"subtitle": "L-W60G_subtitle",
+	"pluginList": "L-W60G_pluginList",
+	"split": "L-W60G_split",
 	"repoHeader": "L-W60G_repoHeader"
 };
 const css$1 = `.L-W60G_subtitle {
