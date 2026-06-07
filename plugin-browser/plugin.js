@@ -730,8 +730,8 @@ async function getAllPlugins() {
 const classes = {
 	"installButton": "THQemG_installButton",
 	"buttonContainer": "THQemG_buttonContainer",
-	"contents": "THQemG_contents",
-	"pluginCard": "THQemG_pluginCard"
+	"pluginCard": "THQemG_pluginCard",
+	"contents": "THQemG_contents"
 };
 const css = `.THQemG_pluginCard {
   text-align: left;

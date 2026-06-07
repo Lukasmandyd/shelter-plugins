@@ -154,14 +154,14 @@ function t(key, replace) {
 //#endregion
 //#region plugins/dorion-custom-keybinds/components/Keybinds.tsx.scss
 const classes$3 = {
-	"keybindsBanner": "Zz-Z3G_keybindsBanner",
 	"header": "Zz-Z3G_header",
+	"keybindRestartCard": "Zz-Z3G_keybindRestartCard",
 	"keybindsSwitch": "Zz-Z3G_keybindsSwitch",
 	"keybindSection": "Zz-Z3G_keybindSection",
-	"keybindRestartCard": "Zz-Z3G_keybindRestartCard",
-	"keybindRestartButton": "Zz-Z3G_keybindRestartButton",
 	"keybindsHeader": "Zz-Z3G_keybindsHeader",
-	"keybindsButton": "Zz-Z3G_keybindsButton"
+	"keybindsBanner": "Zz-Z3G_keybindsBanner",
+	"keybindsButton": "Zz-Z3G_keybindsButton",
+	"keybindRestartButton": "Zz-Z3G_keybindRestartButton"
 };
 const css$3 = `.Zz-Z3G_keybindSection {
   flex-direction: column;
@@ -230,12 +230,12 @@ const css$3 = `.Zz-Z3G_keybindSection {
 //#endregion
 //#region plugins/dorion-custom-keybinds/components/KeybindSection.tsx.scss
 const classes$2 = {
+	"note": "QTLdLq_note",
 	"keybindRoot": "QTLdLq_keybindRoot",
-	"actionSection": "QTLdLq_actionSection",
-	"removeButton": "QTLdLq_removeButton",
 	"keybindSection": "QTLdLq_keybindSection",
+	"actionSection": "QTLdLq_actionSection",
 	"keybindArea": "QTLdLq_keybindArea",
-	"note": "QTLdLq_note"
+	"removeButton": "QTLdLq_removeButton"
 };
 const css$2 = `.QTLdLq_keybindRoot {
   flex-direction: column;
@@ -292,10 +292,10 @@ const css$2 = `.QTLdLq_keybindRoot {
 //#endregion
 //#region components/Dropdown.tsx.scss
 const classes$1 = {
-	"dcontainer": "sqVpyW_dcontainer",
-	"ddown": "sqVpyW_ddown",
 	"dsarrow": "sqVpyW_dsarrow",
-	"ddownplaceholder": "sqVpyW_ddownplaceholder"
+	"ddownplaceholder": "sqVpyW_ddownplaceholder",
+	"ddown": "sqVpyW_ddown",
+	"dcontainer": "sqVpyW_dcontainer"
 };
 const css$1 = `.sqVpyW_ddown {
   box-sizing: border-box;
@@ -434,12 +434,12 @@ const Dropdown = (props) => {
 //#endregion
 //#region components/KeybindInput.tsx.scss
 const classes = {
-	"recording": "N-HDcq_recording",
 	"pulse": "N-HDcq_pulse",
+	"recording": "N-HDcq_recording",
 	"keybindButton": "N-HDcq_keybindButton",
-	"keybindPlaceholder": "N-HDcq_keybindPlaceholder",
+	"keybindInput": "N-HDcq_keybindInput",
 	"keybindContainer": "N-HDcq_keybindContainer",
-	"keybindInput": "N-HDcq_keybindInput"
+	"keybindPlaceholder": "N-HDcq_keybindPlaceholder"
 };
 const css = `.N-HDcq_keybindContainer {
   background: var(--background-base-lowest);
@@ -1127,7 +1127,7 @@ var import_web = __toESM(require_web());
 const { flux: { dispatcher: FluxDispatcher }, ui: { ReactiveRoot } } = shelter;
 let child = null;
 const viewedKeybindsCallback = (payload) => {
-	if (payload.section !== "Keybinds") {
+	if (payload.section !== "keybinds_panel") {
 		if (child) {
 			child.remove();
 			child = null;
